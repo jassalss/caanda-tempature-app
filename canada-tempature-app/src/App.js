@@ -7,7 +7,7 @@ const App = () => {
   const cityNames = [
     ["Vancouver", "Beautiful British Columbia"],
     ["Calgary", "Wild Rose Country"],
-    ["Toronto ", "Your to Discover"],
+    ["Toronto ", "Yours to Discover"],
   ];
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const App = () => {
         }
         return count + 1;
       });
-    }, 3000);
+    }, 4000);
     return () => clearInterval(inerval);
   }, []);
 
@@ -45,14 +45,20 @@ const App = () => {
     <div className="App">
       <div className={`image${count}`}>
         <div className={`innerbox${count}`}>
+          <span
+            class="iconify forSize"
+            data-icon="uim:squre-shape"
+            data-inline="false"
+          ></span>
           <div className="upperHalf">
             <div className="firstHalf">
               <Number number={num} />
             </div>
             <div className="secondHalf">
               <div className="text">
-                <p>Real meteorologist</p>
-                <p>based in Calgary </p>
+                Real meteorologist
+                <br />
+                based in Calgary
               </div>
               <div className="navBar">
                 <ul>
@@ -77,7 +83,12 @@ const App = () => {
               <div>{cityNames[`${count - 1}`][0]}</div>
               <div>{cityNames[`${count - 1}`][1]}</div>
             </div>
-            <div className="myLink">
+            <div
+              className="myLink"
+              onClick={() => {
+                window.open("https://weather.gc.ca/canada_e.html", "_blank");
+              }}
+            >
               View More{" "}
               <span
                 class="iconify"
@@ -93,9 +104,9 @@ const App = () => {
               data-inline="false"
             ></span>
             <div className="bottomText">
-              scroll down
+              Scroll Down
               <br />
-              to explore
+              to Explore
             </div>
           </div>
         </div>

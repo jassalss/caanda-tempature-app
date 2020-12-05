@@ -118,7 +118,6 @@ body {
   width: 50%;
   height: 100%;
   border-top: 0.5px solid white;
-  margin-top: 2rem;
   display: flex;
 }
 .navBar {
@@ -153,10 +152,11 @@ p {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
+  font-size: x-small;
 }
 .bigNumber {
   color: white;
-  font-size: 9rem;
+  font-size: 11rem;
   font-weight: bold;
 }
 .bottomHalf {
@@ -191,4 +191,11 @@ p {
 }
 .size {
   font-size: xx-large;
+}
+.forSize {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  color: rgb(124, 5, 5);
+  width: 2.5rem;
+  height: 2.5rem;
 }
